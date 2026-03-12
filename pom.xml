@@ -61,7 +61,36 @@
 
 
         </plugin>
+        <plugin>
+            <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin -->
+
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Main-Class>org.example.Main</Main-Class>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+
+        </plugin>
+        <plugin>
+            <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
+
+        </plugin>
     </plugins>
 </build>
+    <distributionManagement>
+        <repository>
+            <id>local-repo</id>
+            <url>file:///C:\my-local-maven-repo</url>
+        </repository>
+    </distributionManagement>
 </project>
 
